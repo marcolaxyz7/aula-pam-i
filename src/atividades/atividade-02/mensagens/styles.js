@@ -6,7 +6,7 @@ import Mensagem from '.';
 const styles = StyleSheet.create({
     container: {
         borderWidth: RFPercentage(0.5),
-        borderColor: 'red',
+        borderColor: 'black',
         padding: RFPercentage(1.5),
         borderRadius: RFPercentage(1.5),
         width: '90%',
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     titulo: {
       fontSize: RFPercentage(3.5),
       fontWeight: 'bold',
-      color: 'red',
+      color: 'black',
     },
     mensagem: {
         fontSize: RFPercentage(2),
