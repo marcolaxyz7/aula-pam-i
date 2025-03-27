@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     titulo: {
-        fontSize: RFPercentage(4),
+        fontSize: RFPercentage(5),
         borderWidth: 3,
         marginTop: 20,
         marginBottom: 20,
@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     imagem: {
-        //height: RFPercentage(16),
-        //width: RFPercentage(48),
-        width: '90%',
+        height: RFPercentage(15),
+        width: RFPercentage(15),
+        //width: '40%',
+        padding: 8,
         resizeMode: 'contain',
-        alignItems: 'center',
-
+        alignItems: 'flex-start',
     },
 });
 
