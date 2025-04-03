@@ -2,16 +2,13 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-import img1 from '../../../assets/polobranca.jpg';
-
-import img2 from '../../../assets/polovermelha.jpg';
-
-import img3 from '../../../assets/polopreta.jpg';
-
-import img4 from '../../../assets/poloazul.jpg';
+import poloBranca from '../../../assets/polobranca.jpg';
+import poloVermelha from '../../../assets/polovermelha.jpg';
+import poloPreta from '../../../assets/polopreta.jpg';
+import poloAzul from '../../../assets/poloazul.jpg';
 
 
-import Card from './mensagens';
+import Card from './card';
 
 function Atividade02 () {
     return(
@@ -20,9 +17,27 @@ function Atividade02 () {
 
             <Card 
             titulo={'Polo Branca'}
-            descricao={''}
-            valor={''}
-            img1={''}
+            descricao={'Camisa Polo Social'}
+            valor={'300,00'}
+            img={poloBranca}
+            />
+            <Card 
+            titulo={'Polo Preta'}
+            descricao={'Camisa Polo Social'}
+            valor={'300,00'}
+            img={poloPreta}
+            />
+            <Card 
+            titulo={'Polo Vermelha'}
+            descricao={'Camisa Polo Social'}
+            valor={'200,00'}
+            img={poloVermelha}
+            />
+            <Card 
+            titulo={'Polo Azul'}
+            descricao={'Camisa Polo Social'}
+            valor={'200,00'}
+            img={poloAzul}
             />
       
         </View>

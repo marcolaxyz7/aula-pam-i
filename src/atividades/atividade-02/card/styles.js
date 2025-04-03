@@ -1,27 +1,46 @@
 import { StyleSheet } from 'react-native';
 
 import { RFPercentage } from 'react-native-responsive-fontsize';
-import Mensagem from '.';
 
 const styles = StyleSheet.create({
     container: {
-        borderWidth: RFPercentage(0.5),
-        borderColor: 'black',
-        padding: RFPercentage(1.5),
-        borderRadius: RFPercentage(1.5),
-        height: '20%',
-        width: '100%',
-        alignItems: 'flex-start',
-        marginBottom: RFPercentage(1),
+        flexDirection: 'row',
+        borderWidth: RFPercentage(0.5), 
+        borderColor: 'darkslategrey', 
+        padding: RFPercentage(1.5), 
+        borderRadius: RFPercentage(1.5), 
+        width: '100%', 
+        alignItems: 'center', 
+        justifyContent: 'space-between', 
+        marginBottom: RFPercentage(1), 
     },
     titulo: {
-      fontSize: RFPercentage(3.5),
+      fontSize: RFPercentage(2.5),
       fontWeight: 'bold',
       color: 'black',
     },
-    mensagem: {
-        //fontSize: RFPercentage(2),
-        color: '#222222',
+    valor: {
+        fontSize: RFPercentage(2.5),
+        color: '#fff', // Contraste com o fundo escuro
+        fontWeight: 'bold',
+        textAlign: 'center',
+        backgroundColor: '#333', // Fundo escuro para destaque
+        padding: RFPercentage(1),
+        borderRadius: RFPercentage(1),
+        width: '80%',
+        marginTop: RFPercentage(1),
+    },
+    descricao: {
+        fontSize: RFPercentage(1.6),
+        color: '#222',
+    },
+    containerTexto: {
+        width: '65%',
+    },
+    imagem: {
+        height: RFPercentage(12),
+        width: RFPercentage(12),
+        resizeMode: 'stretch',
     },
 });
 
