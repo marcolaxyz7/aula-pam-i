@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     titulo: {
+        backgroundColor: 'red',
         fontSize: RFPercentage(4),
         borderWidth: 3,
         marginTop: 20,
@@ -20,17 +21,12 @@ const styles = StyleSheet.create({
         height: 80,
         textAlign: 'center',
         textAlignVertical: 'center',
-        color: 'red',
+        color: 'white',
         borderColor: 'red',
         borderRadius: 20,
     },
     texto: {
         fontSize: RFPercentage(2.2),
-    },
-    botaoAlert: {
-        width: '75%',
-        margin: RFPercentage(2),
-
     },
     valor: {
         color: 'red',
@@ -38,7 +34,7 @@ const styles = StyleSheet.create({
     },
     botao: {
         backgroundColor: 'red',
-        width: '75%',
+        width: '15%',
         borderRadius: RFPercentage(2),
         padding: RFPercentage(1),
         alignItems: 'center',
@@ -48,6 +44,13 @@ const styles = StyleSheet.create({
     textBotao: {
         fontSize: RFPercentage(2),
         color: '#fafafa',
+    },
+    containerBotoes: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        width: '60%',
+        marginBottom: RFPercentage(2),
     },
 });
 

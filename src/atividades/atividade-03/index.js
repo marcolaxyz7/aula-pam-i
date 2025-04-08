@@ -3,7 +3,7 @@ import { View, Text, Button, Alert, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
-function Exemplo03 () {
+function Atividade03 () {
 
     const [numero, setNumero] = useState(0);
 
@@ -11,7 +11,13 @@ function Exemplo03 () {
         setNumero(numero + 1);
     }
 
-    
+    function handleDecrementa() {
+        setNumero(numero - 1);
+    }
+
+    function handleZerar() {
+        setNumero(0);
+    }
 
     function handleExibeBotao () {
         Alert.alert('Alerta', 'Alguém clicou no botão!')
@@ -23,25 +29,22 @@ function Exemplo03 () {
 
     return(
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 3</Text>
-            <Text style={styles.texto}>Variáveis e State</Text>
-
-            <View style={styles.botaoAlert}>
-            <Button
-                title='Não clique'
-                color={'red'}
-                onPress={handleExibeBotao2}
-            />
-            </View>
+            <Text style={styles.titulo}>Atividade03</Text>
 
             <Text style={styles.valor}>{numero}</Text>
             <TouchableOpacity style={styles.botao} onPress={handelIncrementa}>
                 <Text style={styles.txtBotao}>+1</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity style={styles.botao} onPress={handleDecrementa}>
+                <Text style={styles.txtBotao}>-1</Text>
+            </TouchableOpacity>
 
+            <TouchableOpacity style={styles.botao} onPress={handleZerar}>
+                <Text style={styles.txtBotao}>Zerar</Text>
+            </TouchableOpacity>
         </View>
     );
 }
 
-export default Exemplo03;
+export default Atividade03;
