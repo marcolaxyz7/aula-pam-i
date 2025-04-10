@@ -30,19 +30,25 @@ function Atividade03 () {
     return(
         <View style={styles.container}>
             <Text style={styles.titulo}>Atividade03</Text>
+        <View style={styles.containerBotoes2}>
+        <View style={styles.containerBotoes}>
+
+            <TouchableOpacity style={styles.botao} onPress={handleDecrementa}>
+                <Text style={styles.txtBotao}>-1</Text>
+            </TouchableOpacity>   
 
             <Text style={styles.valor}>{numero}</Text>
+
             <TouchableOpacity style={styles.botao} onPress={handelIncrementa}>
                 <Text style={styles.txtBotao}>+1</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.botao} onPress={handleDecrementa}>
-                <Text style={styles.txtBotao}>-1</Text>
-            </TouchableOpacity>
+        </View>
 
             <TouchableOpacity style={styles.botao} onPress={handleZerar}>
                 <Text style={styles.txtBotao}>Zerar</Text>
             </TouchableOpacity>
+        </View>
         </View>
     );
 }

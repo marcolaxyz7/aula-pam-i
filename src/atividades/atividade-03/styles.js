@@ -35,11 +35,11 @@ const styles = StyleSheet.create({
     botao: {
         backgroundColor: 'red',
         width: '15%',
-        borderRadius: RFPercentage(2),
         padding: RFPercentage(1),
         alignItems: 'center',
         justifyContent: 'center',
         margin: RFPercentage(2),
+        borderRadius: RFPercentage(2),
     },
     textBotao: {
         fontSize: RFPercentage(2),
@@ -52,6 +52,19 @@ const styles = StyleSheet.create({
         width: '60%',
         marginBottom: RFPercentage(2),
     },
+    containerBotoes: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center', // centraliza horizontalmente
+        marginVertical: RFPercentage(2),
+    },
+    containerBotoes2: {
+        alignItems: 'center',
+        justifyContent: 'center', // centraliza horizontalmente
+        borderWidth: 3,
+        borderColor: 'black',
+    },
+    
 });
 
 export default styles;
