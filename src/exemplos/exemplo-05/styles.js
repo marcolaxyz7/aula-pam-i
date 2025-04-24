@@ -1,64 +1,72 @@
-import { StyleSheet } from 'react-native';
-import { RFPercentage } from 'react-native-responsive-fontsize';
+import { StyleSheet } from "react-native";
+
+import { RFPercentage } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#f0f4f8',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 20,
-        borderRadius: RFPercentage(1),
-    },
-    titulo: {
-        fontSize: 28,
-        fontWeight: 'bold',
-        color: '#1e3a8a',
-        marginBottom: 20,
-    },
-    titulo2: {
-        fontSize: 18,
-        fontWeight: '600',
-        color: '#1e40af',
-        marginTop: 10,
-        marginBottom: 5,
-    },
-    titulo3: {
-        fontSize: 22,
-        color: '#334155',
-        marginBottom: 30,
-        textAlign: 'center',
-    },
-    txtInput: {
-        width: '100%',
-        padding: 12,
-        borderWidth: 1,
-        borderColor: '#94a3b8',
-        borderRadius: 10,
-        backgroundColor: '#ffffff',
-        fontSize: 16,
-        marginBottom: 10,
-    },
-    botao: {
-        backgroundColor: '#3b82f6',
-        paddingVertical: 12,
-        paddingHorizontal: 30,
-        borderRadius: 10,
-        marginTop: 20,
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
-    txtBotao: {
-        color: '#ffffff',
-        fontSize: 16,
-        fontWeight: '600',
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff5f5',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  titulo: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#b30000',
+    marginBottom: 20,
+  },
+  texto: {
+    fontSize: 32,
+    marginBottom: 10,
+    color: '#800000',
+  },
+  input: {
+    textAlign: 'center',
+    borderWidth: 1,
+    borderColor: '#ffcccc',
+    backgroundColor: '#fff0f0',
+    borderRadius: 10,
+    padding: 10,
+    width: '20%',
+    marginBottom: 10,
+    fontSize: 16,
+  },
+  resultado: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#cc0000',
+    marginBottom: 20,
+  },
+  containerDirecao: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+    marginVertical: 15,
+  },
+  botao: {
+    backgroundColor: '#ff4d4d',
+    padding: 15,
+    borderRadius: 10,
+    marginHorizontal: 5,
+    minWidth: 60,
+    alignItems: 'center',
+  },
+  botaoTexto: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  zerar: {
+    backgroundColor: '#cc0000',
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 10,
+  },
+  zerarTexto: {
+    color: 'white',
+    fontWeight: 'bold',
+  }
 });
 
 export default styles;

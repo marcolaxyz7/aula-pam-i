@@ -1,77 +1,92 @@
-import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import styles from './styles';
+import React, { useState } from 'react';
 
 function Exemplo05 () {
-    const [n1, setN1] = useState('');
-    const [n2, setN2] = useState('');
-    const [resultado, setResultado] = useState('');
-    const [exibido, setExibido] = useState(false); // flag pra controlar se já exibiu
 
-    function exibirResultado() {
-        const nomeCompleto = `${n1} ${n2}`;
-        setResultado(nomeCompleto);
-        setN1('');
-        setN2('');
-        setExibido(true);
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
+
+function Soma() {
+    const conta = parseInt(n1) + parseInt(n2);
+    setTotal(conta.toString());
     }
 
-    function reiniciar() {
-        setExibido(false);
-        setResultado('');
-        setN1('');
-        setN2('');
+function Subtrair() {
+    const conta = parseInt(n1) - parseInt(n2);
+    setTotal(conta.toString());
     }
 
-    return (
+function Multiplicar() {
+    const conta = parseInt(n1) * parseInt(n2);
+    setTotal(conta.toString());
+    }
+
+function Dividir() {
+        if (Number(n2) === 0) {
+            setTotal('Erro: divisão por zero');
+        } else {
+            const conta = Number(n1) / Number(n2);
+            setTotal(conta.toString());
+        }
+    }
+
+function Zerar() {
+    setTotal  ('');
+    setN1  ('');
+    setN2  ('');
+}
+
+    return(
+
         <View style={styles.container}>
             <Text style={styles.titulo}>Exemplo 5</Text>
 
-            {/* Aqui vai aparecer o nome completo ou o texto padrão */}
-            <Text style={styles.titulo3}>
-                {exibido ? resultado : 'Inserir n1 e n2'}
-            </Text>
+            <Text style={styles.texto}>Calculadora Básica</Text>
 
-            {/* Só mostra os campos se ainda não exibiu o nome */}
-            {!exibido && (
-                <>
-                    <Text style={styles.titulo2}>Valor 1</Text>
-                    <TextInput 
-                        style={styles.txtInput} 
-                        value={nome}
-                        onChangeText={setN1}
-                    />
+            <TextInput
+              style={styles.input}
+              onChangeText={(entrada) => setN1(entrada)}
+              value={n1}
+              keyboardType="numeric"
+            />
 
-                    <Text style={styles.titulo2}>Valor 2</Text>
-                    <TextInput 
-                        style={styles.txtInput} 
-                        value={sobrenome}
-                        onChangeText={setN2}
-                    />
-                </>
-            )}
+            <TextInput
+              style={styles.input}
+  onChangeText={(entrada) => setN2(entrada)}
+  value={n2}
+  keyboardType="numeric"
+/>
 
-            {/* Botão de exibir sempre visível */}
-            {!exibido && (
-                <TouchableOpacity
-                    style={styles.botao}
-                    onPress={exibirResultado}
-                >
-                    <Text style={styles.txtBotao}>Exibir Resultado</Text>
-                </TouchableOpacity>
-            )}
+<Text style={styles.resultado}>Total</Text>
+<TextInput
+  style={styles.input}
+  editable={false}
+  value={total}
+/>
 
-            {/* Botão para reiniciar e digitar outro nome */}
-            {exibido && (
-                <TouchableOpacity
-                    style={styles.botao}
-                    onPress={reiniciar}
-                >
-                    <Text style={styles.txtBotao}>Novo nome</Text>
-                </TouchableOpacity>
-            )}
-        </View>
+<View style={styles.containerDirecao}>
+  <TouchableOpacity style={styles.botao} onPress={Soma}>
+    <Text style={styles.botaoTexto}>+</Text>
+  </TouchableOpacity>
+  <TouchableOpacity style={styles.botao} onPress={Subtrair}>
+    <Text style={styles.botaoTexto}>−</Text>
+  </TouchableOpacity>
+  <TouchableOpacity style={styles.botao} onPress={Multiplicar}>
+    <Text style={styles.botaoTexto}>×</Text>
+  </TouchableOpacity>
+  <TouchableOpacity style={styles.botao} onPress={Dividir}>
+    <Text style={styles.botaoTexto}>÷</Text>
+  </TouchableOpacity>
+</View>
+
+<TouchableOpacity style={styles.zerar} onPress={Zerar}>
+  <Text style={styles.zerarTexto}>Zerar</Text>
+</TouchableOpacity>
+
+
+</View>
     );
 }
 
