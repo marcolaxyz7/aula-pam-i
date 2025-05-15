@@ -17,12 +17,14 @@ import Atividade02 from './src/atividades/atividade-02';
 import Atividade03 from './src/atividades/atividade-03';
 import Atividade04 from './src/atividades/atividade-04';
 import Atividade05 from './src/atividades/atividade-05';
+import Atividade06 from './src/atividades/atividade-06';
+import Index from './src/atividades/atividade-06/componentes';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Atividade05 />
+      <Index />
       <StatusBar style="light" />
     </View>
   );
