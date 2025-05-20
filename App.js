@@ -10,6 +10,7 @@ import Exemplo02 from './src/exemplos/exemplo-02';
 import Exemplo03 from './src/exemplos/exemplo-03';
 import Exemplo04 from './src/exemplos/exemplo-04';
 import Exemplo05 from './src/exemplos/exemplo-05';
+import Exemplo07 from './src/exemplos/exemplo-07';cmd
 
 //Ativigdades
 import Atividade01 from './src/atividades/atividade-01';
@@ -24,7 +25,7 @@ import Index from './src/atividades/atividade-06/componentes';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Index />
+      <Exemplo07 />
       <StatusBar style="light" />
     </View>
   );
